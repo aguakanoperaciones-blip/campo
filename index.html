@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#003E7E">
+<title>Apps de campo</title>
+<style>
+  :root{--navy:#003E7E;--blue:#0053A0;--ink:#12232E;--soft:#4B5D68;--line:#DCE3E1}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(160deg,#0053A0 0%,#1F95C7 60%,#18B5C9 100%);display:grid;place-items:center;padding:24px 16px}
+  .card{background:#fff;border-radius:20px;padding:26px 22px;width:min(420px,100%);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+  .stripe{height:4px;border-radius:2px;background:linear-gradient(90deg,#0053A0,#1F95C7,#18B5C9,#7AC70C);margin:10px 0 18px}
+  h1{margin:0;font-size:22px;color:var(--navy);font-weight:800;letter-spacing:.5px}
+  p{margin:4px 0 0;color:var(--soft);font-size:13.5px}
+  a.app{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+  a.app:active{background:#F1F6FB}
+  a.app .ic{width:46px;height:46px;border-radius:12px;background:var(--blue);display:grid;place-items:center;flex:none}
+  a.app b{display:block;font-size:16px;color:var(--navy)}
+  a.app span{font-size:12.5px;color:var(--soft)}
+  .pie{font-size:11.5px;color:var(--soft);margin-top:14px;text-align:center}
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>AGUAKAN</h1>
+    <p>Operaciones Hidráulicas · Apps de campo</p>
+    <div class="stripe"></div>
+    <a class="app" href="captura-pozos.html">
+      <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg></div>
+      <div><b>Pozos y tanques</b><span>Lectura diaria de pozos e inspección de tanques</span></div>
+    </a>
+    <a class="app" href="pipas.html">
+      <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V8h11v8M13 11h4l3 3v2h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div>
+      <div><b>Suministro de pipas</b><span>Registro de viajes con ubicación y reporte</span></div>
+    </a>
+    <div class="pie">Agrega esta página a la pantalla de inicio para abrirla como app.</div>
+  </div>
+<script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
